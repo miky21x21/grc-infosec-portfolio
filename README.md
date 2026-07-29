@@ -23,5 +23,5 @@ This portfolio is constructed to demonstrate baseline operational competency for
 ### 📂 Repository Structure & Artifacts
 | Artifact | File Name | Framework / Standard | Summary Description |
 | :--- | :--- | :--- | :--- |
-| **Artifact #1** | `Enterprise_Asset_Inventory_v1.0.xlsx` | ISO 27001 Control A.5.9 | Categorized enterprise asset inventory with impact scoring & KPIs |
-| **Artifact #2** | `Security_Fundamentals_Guide.md` | ISC2 / NIST Basics | Executive brief on CIA Triad, threat mechanics, and security controls |
+| **Artifact #1** | [`Enterprise_Asset_Inventory_v1.0.xlsx`](./Enterprise_Asset_Inventory_v1.0.xlsx) | ISO 27001 Control A.5.9 | Categorized enterprise asset inventory with impact scoring & KPIs |
+| **Artifact #2** | [`Security_Fundamentals_Guide.md`](./Security_Fundamentals_Guide.md) | ISC2 / NIST Basics | Executive brief on CIA Triad, threat mechanics, and security controls |
