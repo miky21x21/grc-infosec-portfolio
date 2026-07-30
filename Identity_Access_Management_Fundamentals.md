@@ -11,11 +11,13 @@
 
 Every secure identity system relies on four sequential pillars: **identification, Authentication, Authorization, and Accounting (IAAA)**.
 
-┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐
-│  IDENTIFICATION  │ ───► │  AUTHENTICATION  │ ───► │  AUTHORIZATION   │ ───► │    ACCOUNTING    │
-│  "Who are you?"  │      │ "Prove who you   │      │ "What are you    │      │ "What did you    │
-│                  │      │       are"       │      │  allowed to do?" │      │       do?"       │
-└──────────────────┘      └──────────────────┘      └──────────────────┘      └──────────────────┘
+```
+      ┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐
+      │  IDENTIFICATION  │ ───► │  AUTHENTICATION  │ ───► │  AUTHORIZATION   │ ───► │    ACCOUNTING    │
+      │  "Who are you?"  │      │ "Prove who you   │      │ "What are you    │      │ "What did you    │
+      │                  │      │       are"       │      │  allowed to do?" │      │       do?"       │
+      └──────────────────┘      └──────────────────┘      └──────────────────┘      └──────────────────┘
+```
 
 ### Identification
 - **Definition:** The process where an entity claims an identity in a system.
