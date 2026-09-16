@@ -50,8 +50,8 @@ produce written evidence for every safeguard decision it has made?**
 | DH-RSK-001 | Enterprise risk register | `02_Registers/` | In progress |
 | DH-BSL-001 | Control baseline register | `02_Registers/` | Published |
 | DH-POL-001 | Information governance programme | `03_Policies/` | Planned |
-| DH-STD-001 | Data classification standard | `03_Policies/` | Planned |
-| DH-STD-002 | Information handling standard | `03_Policies/` | Planned |
+| DH-STD-001 | Information classification and handling standard | `03_Policies/` | Planned |
+| DH-DEC-001 | Design decision record | `06_Decisions/` | Published |
 | DH-GAP-001 | HIPAA safeguard gap assessment | `04_Assessments/` | Planned |
 
 ---
