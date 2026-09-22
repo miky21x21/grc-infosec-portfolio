@@ -4,7 +4,7 @@
 |---|---|
 | ID | MIC-EVD-001 |
 | Status | Living document |
-| First entry | 22 September 2026 |
+| First entry | 21 September 2026 |
 | Author | Mitchell Swapnil Chatterjee |
 | Scope | The Meridian Sextant AWS lab account (single account, see MIC-DEC-007) and the build workstation |
 
@@ -80,7 +80,26 @@ The sign-in used an OAuth 2.0 authorization-code flow with PKCE (`code_challenge
 
 ## Build log
 
+**21 September 2026 — Design: the company blueprint and the pivot to Sextant**
+
+No changes to AWS; design and research only.
+
+- Defined the company in depth, one topic at a time, grounding each claim in published sources and practitioners' own accounts.
+- Blueprinted the original scope, the Pune BFS delivery unit: the client lifecycle (win, transition, run, assure, exit); a contractor-ODC delivery model (working assumption); the split between Meridian-owned, shared and client-owned controls; secure client bays; and the ISO 27005 primary assets. One finding: Meridian's DPDP role flips, as processor for its clients' customers but fiduciary for its own staff.
+- Gap found: DORA was missing from the framework stack. Recorded as MIC-DEC-001.
+- Owner's review: the blueprint described a traditional offshore delivery centre, not the cloud- and AI-centred company intended. Researched current real-world technology and its constraints (Bedrock AgentCore Policy, managed GraphRAG region availability, Neptune Analytics pricing, confidential GPU computing). The scope moved to a new AI-native platform unit, named Meridian Sextant. Recorded as MIC-DEC-002.
+- World models kept out of scope: their commercial home is physical AI, so they sit in a separate Physical AI lab on the technology radar (working assumption).
+- Two externally generated analyses, one on viability and one listing risks, were checked claim by claim against primary sources.
+  - Confirmed: Bedrock agent guardrails do not screen tool calls; the Indian IT sector's AI revenue is growing on a weakening base (Jefferies downgrade, February 2026).
+  - Corrected: that Indian ICT providers are automatically DORA critical providers (designation is an assessment; the first list, November 2025, named 19 providers); the MIT "95% of pilots fail" figure (it measures a lack of measurable profit-and-loss impact, and its method is contested); GraphRAG's USD 33,000 indexing cost (outdated).
+  - Unsupported: a 40–60% cost premium for confidential computing.
+  - Result: MIC-DEC-003, proposed.
+- Roadmap additions from verified precedents: an agent registry, which Microsoft's 2026 Cyber Pulse report recommends as the first step; and "earned autonomy", modelled on Morgan Stanley's FIXR reconciliation agents, which clear familiar cases automatically and escalate the rest.
+- Compiled a private owner's briefing book (v0.1) holding the whole picture, with every statement tagged as decided, working assumption, proposed or open. It is a reading copy and is not committed.
+
 **22 September 2026 — Week 1: account security and tooling**
+
+- Design, before the hands-on work: Sextant gained a fifth client regulated in India (MIC-DEC-004), and the group's other industries were stated (Sextant itself is financial-services only). The briefing book moved to v0.2.
 
 - Checked credits and plan status. The console shows the free plan ends **28 February 2027**, which is the teardown deadline. After the AWS Budgets activity, credits remaining read USD 145.75.
 - Locked root with a passkey. An attempt to add a second MFA device failed because the session pre-dated the first device: AWS requires an MFA-authenticated session to change MFA settings.
@@ -89,7 +108,7 @@ The sign-in used an OAuth 2.0 authorization-code flow with PKCE (`code_challenge
 - Cleaned up tutorial leftovers in Mumbai.
 - Installed the toolchain. `code`, `aws` and `terraform` were not found until a full restart refreshed the Windows PATH, and the Microsoft Store "python" alias had to be disabled.
 - Signed the CLI in with `aws login`, with no keys stored anywhere.
-- Decisions recorded: MIC-DEC-007 (single-account lab) and MIC-DEC-008 (lab identity).
+- Decisions made during the build: MIC-DEC-007 (single-account lab) and MIC-DEC-008 (lab identity). All eight decision records and this index were committed and pushed the same day.
 
 ## Open actions
 
