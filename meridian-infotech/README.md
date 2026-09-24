@@ -26,9 +26,10 @@ Evidence is designed in, not gathered at audit time: every control emits logs, w
 | Folder | Contents |
 |---|---|
 | [`00_Scope`](00_Scope) | **MIC-SCP-001**: what is in scope, the clients, the residency rules and the exclusions |
-| [`06_Decisions`](06_Decisions) | **MIC-DEC-001 to 010**: each decision with its context, alternatives and consequences |
+| [`06_Decisions`](06_Decisions) | **MIC-DEC-001 to 011**: each decision with its context, alternatives and consequences |
 | [`05_Evidence`](05_Evidence) | **MIC-EVD-001**: the evidence register, findings, root-activity record and build log |
-| [`01_Methodology`](01_Methodology) | Risk methodology |
+| [`07_Infrastructure`](07_Infrastructure) | **Terraform code**, starting with lab 01: an S3 bucket strangers cannot list |
+| [`01_Methodology`](01_Methodology) | Risk methodology, and **MIC-MTH-002**: how this project is run |
 | [`02_Registers`](02_Registers) | Risk register |
 | [`04_Assessments`](04_Assessments) | Gap assessment |
 
@@ -36,9 +37,9 @@ Evidence is designed in, not gathered at audit time: every control emits logs, w
 
 ISO/IEC 27001:2022 · ISO/IEC 42001:2023 · SOC 2 · NIST CSF 2.0 · DORA · GDPR · EU AI Act · DPDP Act 2023 · CERT-In Directions · RBI directions and FREE-AI
 
-## Status (23 September 2026)
+## Status (24 September 2026)
 
-- **Done:** account security, keyless access and cost controls (Week 1), recorded as evidence; scope and ten decision records.
+- **Done:** account security, keyless access and cost controls, recorded as evidence; scope and eleven decision records; the first Terraform build, attacked and proven (EV-011); a CloudTrail audit that corrected the project's own root-activity record (F-08).
 - **Next:** risk register update (AI and DORA rows), then the first Terraform build.
 - **Open:** Amazon Bedrock model invocation is blocked at account level pending an AWS eligibility review (finding F-06).
 - **Limits of the lab:** one AWS account rather than an organization; no US region; no active-active storage. These are target design only, and are recorded as such.
