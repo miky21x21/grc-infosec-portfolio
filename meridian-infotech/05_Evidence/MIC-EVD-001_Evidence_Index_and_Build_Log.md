@@ -19,14 +19,16 @@
 
 | ID | Date | What it shows | ISO 27001:2022 | Form | Status |
 |---|---|---|---|---|---|
-| EV-001 | 22 Sep 2026 | Root user protected by a passkey MFA device; no root access keys, CloudFront key pairs or X.509 signing certificates | 8.2, 8.5 | Screenshot | To add |
+| EV-001 | 22 Sep 2026 | Root user protected by a passkey MFA device, with an authenticator app added as backup; no root access keys, CloudFront key pairs or X.509 signing certificates | 8.2, 8.5 | Screenshot `EV-001` | Recorded |
 | EV-002 | 22 Sep 2026 | Legacy generic IAM user `UserA` deleted | 5.16, 5.18 | Log entry below | Recorded |
-| EV-003 | 22 Sep 2026 | Named admin `mitchell-admin` created with console access; permissions granted only through the `Administrators` group; MFA assigned | 5.16, 5.18, 8.2, 8.5 | Screenshot | To add |
-| EV-004 | 22 Sep 2026 | IAM access to billing information activated by root, so that daily cost work never requires root | 8.2 | Screenshot | To add |
-| EV-005 | 22 Sep 2026 | Budget `sextant-monthly-gross-spend`: USD 5 monthly, unblended cost, **credits excluded**, alerts at 80% actual and 100% forecast; the actual-cost alert fired immediately | 8.16 (supporting) | Screenshot | To add |
-| EV-006 | 22 Sep 2026 | Mumbai clean-up: internet-facing launch-wizard security group `blog01` deleted; no EC2 instances remain; no `rds!` secrets in Secrets Manager | 8.9, 8.20 | Screenshot | To add |
+| EV-003 | 22 Sep 2026 | Named admin `mitchell-admin` created with console access; permissions granted only through the `Administrators` group; MFA assigned | 5.16, 5.18, 8.2, 8.5 | Screenshots `EV-003a` (group and MFA), `EV-003b` (MFA prompt at sign-in) | Recorded |
+| EV-004 | 22 Sep 2026 | IAM access to billing information activated by root, so that daily cost work never requires root | 8.2 | Screenshot `EV-004` | Recorded |
+| EV-005 | 22 Sep 2026 | Budget `sextant-monthly-gross-spend`: USD 5 monthly, unblended cost, **credits excluded**, alerts at 80% actual and 100% forecast; the actual-cost alert fired immediately | 8.16 (supporting) | Screenshot `EV-005` | Recorded |
+| EV-006 | 22 Sep 2026 | Mumbai clean-up: internet-facing launch-wizard security group `blog01` and the tutorial key pair deleted; no EC2 instances remain; no `rds!` secrets in Secrets Manager | 8.9, 8.20 | Screenshots `EV-006a` (EC2), `EV-006b` (Secrets Manager) | Recorded |
 | EV-007 | 22 Sep 2026 | Workstation toolchain installed with winget from publishers' own download sources, each installer hash verified | 8.19 | Text below | Recorded |
 | EV-008 | 22 Sep 2026 | Keyless CLI access: `aws login` session for `mitchell-admin`; `~/.aws/config` holds a login session and no access keys; no `credentials` file exists | 5.17, 8.5 | Text below | Recorded |
+| EV-009 | 22 Sep 2026 | Access review closed: only `mitchell-admin` remains as an IAM user, and only `Administrators` as a group (`UserA` and the unused `DemoS3Access` group deleted) | 5.16, 5.18 | Screenshot `EV-009` | Recorded |
+| EV-010 | 23 Sep 2026 | Amazon Bedrock model availability in Mumbai, observed in the console; every invocation blocked at account level | 5.23 | Text below | Recorded |
 
 ### EV-007 — Toolchain versions (Git Bash, 22 Sep 2026)
 
@@ -39,6 +41,17 @@ Terraform v1.16.2 on windows_amd64
 ```
 
 Each package was installed with `winget install`, which reported "Successfully verified installer hash" for VS Code, Python, the AWS CLI and Terraform. Downloads came from `vscode.download.prss.microsoft.com`, `python.org`, `awscli.amazonaws.com` and `releases.hashicorp.com`. Terraform 1.16.3 was available upstream but not yet in the winget catalogue; the version will be pinned in code.
+
+### EV-010 — Bedrock inference options in Mumbai (console, 23 Sep 2026)
+
+| Model | Inference options offered in Mumbai | Invocation result |
+|---|---|---|
+| Amazon Nova 2 Lite | Global only | ValidationException: Operation not allowed |
+| GPT-6 Astra | Global only | Not tested (out of jurisdiction) |
+| GPT-5.6 Terra | Global, or India ("IN") | Blocked (see F-06) |
+| gpt-oss-120b | On demand, within the region | Blocked (see F-06) |
+
+The same error appeared for gpt-oss-120b and GPT-5.6 Terra when tested in US East (N. Virginia), including on-demand in-region invocation, so the block is account-wide rather than tied to cross-Region routing. The options shown still confirm the design in MIC-DEC-010: an in-region model and an India-only route both exist in Mumbai.
 
 ### EV-008 — Keyless command-line identity (Git Bash, 22 Sep 2026)
 
@@ -67,8 +80,10 @@ The sign-in used an OAuth 2.0 authorization-code flow with PKCE (`code_challenge
 | F-01 | With credits included, the budget view reported USD 0.00 for the previous month; with credits excluded it reported USD 12.20. **Credits were hiding real usage.** | Budget configured to exclude credits (EV-005) |
 | F-02 | A tutorial security group with three inbound rules remained in Mumbai after its instance was gone | Deleted (EV-006) |
 | F-03 | A generic IAM user from earlier tutorials still existed | Deleted (EV-002) |
-| F-04 | A tutorial EC2 key pair still exists in Mumbai | Open, see below |
-| F-05 | The opt-in region Asia Pacific (Hyderabad) is enabled on the account | Kept for now; noted in MIC-DEC-005 |
+| F-04 | A tutorial EC2 key pair still existed in Mumbai | Key pair deleted in AWS (EV-006); deletion of the local `.pem` file to be confirmed |
+| F-05 | The opt-in region Asia Pacific (Hyderabad) is enabled on the account | Kept as a future in-country failover region (MIC-DEC-010) |
+| F-06 | Every Amazon Bedrock model invocation fails with "ValidationException: Operation not allowed", in Mumbai and N. Virginia, despite full administrator permissions. Community reports attribute this to an account-level eligibility restriction on new accounts without billing history. **A dependency on a supplier's eligibility decision.** | Open: AWS support route identified; re-test after the first bill closes on 1 October; decision on a fallback by 15 October |
+| F-07 | The console was briefly used as root during the Bedrock test, a task that does not require root | Switched to `mitchell-admin`; recorded below |
 
 ## Root user activity record
 
@@ -77,6 +92,7 @@ The sign-in used an OAuth 2.0 authorization-code flow with PKCE (`code_challenge
 | 22 Sep 2026 | Assign root MFA | Only root can manage root's own MFA |
 | 22 Sep 2026 | Delete `UserA`; create `mitchell-admin` and the `Administrators` group | No other administrator existed yet |
 | 22 Sep 2026 | Activate IAM access to billing information | This setting can only be changed by root |
+| 23 Sep 2026 | Bedrock playground test, started by mistake | It was not: noticed from the console header and switched to `mitchell-admin` (F-07) |
 
 ## Build log
 
@@ -110,15 +126,26 @@ No changes to AWS; design and research only.
 - Signed the CLI in with `aws login`, with no keys stored anywhere.
 - Decisions made during the build: MIC-DEC-007 (single-account lab) and MIC-DEC-008 (lab identity). All eight decision records and this index were committed and pushed the same day.
 
+**23 September 2026 — Scope, residency and the first model test**
+
+- Rewrote the scope as MIC-SCP-001 version 2.0, moved it out of the README into `00_Scope`, and replaced the README with a short front page.
+- Accepted MIC-DEC-003. Recorded MIC-DEC-009 (US clients' data in a US region, as a contract choice) and MIC-DEC-010 (residency by jurisdiction, including the Pune access exception and the CERT-In log split).
+- Captured and redacted the evidence screenshots, using solid boxes rather than blur.
+- Tested Bedrock in Mumbai: the inference options confirmed the jurisdiction design, but every invocation was blocked at account level (EV-010, F-06). The console region reset to N. Virginia twice during testing; the default region is to be pinned.
+- Practice: completed flaws.cloud Level 1 (an S3 bucket listable by anyone), which shaped the account-wide public-access block planned for the Terraform build.
+
 ## Open actions
 
-- [ ] Add a backup authenticator-app MFA device to root
-- [ ] Delete the unused `DemoS3Access` group (full S3 access, no members)
-- [ ] Delete the tutorial key pair in Mumbai and its local `.pem` file (F-04)
+- [x] Add a backup authenticator-app MFA device to root (22 Sep)
+- [x] Delete the unused `DemoS3Access` group (22 Sep)
+- [x] Delete the tutorial key pair in Mumbai (22 Sep)
+- [ ] Confirm the tutorial key pair's local `.pem` file is deleted (F-04)
 - [ ] Set an account alias
 - [ ] Confirm `Owner` and `Project` tags on `mitchell-admin` and on the budget
 - [ ] Set the CLI default region permanently: `aws configure set region ap-south-1`
-- [ ] Capture and add the screenshots for EV-001, EV-003, EV-004, EV-005 and EV-006
+- [x] Capture and add the screenshots for EV-001, EV-003, EV-004, EV-005, EV-006 and EV-009 (23 Sep)
+- [ ] Pin the console's default region to Mumbai (Unified Settings)
+- [ ] Bedrock access (F-06): re-test after 1 October; decide on a fallback by 15 October
 - [ ] Strip all rules from the default security groups, via Terraform (planned)
 - [ ] Run `aws logout` at the end of each working day
 ---
