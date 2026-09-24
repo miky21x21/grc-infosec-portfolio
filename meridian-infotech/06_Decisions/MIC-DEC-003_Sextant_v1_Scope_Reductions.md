@@ -3,8 +3,9 @@
 | Field | Value |
 |---|---|
 | ID | MIC-DEC-003 |
-| Status | **Proposed** — awaiting the owner's confirmation |
+| Status | Accepted |
 | Proposed | 21 September 2026 |
+| Accepted | 22 September 2026 |
 | Recorded | 22 September 2026 |
 | Author | Mitchell Swapnil Chatterjee |
 | Related | MIC-DEC-002, MIC-RSK-001 |
@@ -18,7 +19,7 @@ An evidence review on 21 September 2026 checked the Sextant design against publi
 - Confidential GPU inference is not available on AWS: Nitro Enclaves cannot use a GPU.
 - Human reviewers of AI output are prone to fatigue and rubber-stamping.
 
-## Proposed decision
+## Decision
 
 1. **Two products in v1:** compliance intelligence (the flagship), and operations agents that are **read-only advisers**. No v1 tool changes anything in a client's systems; a human executes every fix through the client's change process.
 2. **Roadmap, not v1:** the confidential AI tier, the AI assurance service, the agent registry and earned autonomy.
@@ -30,7 +31,7 @@ An evidence review on 21 September 2026 checked the Sextant design against publi
 
 - **All five products in v1.** Rejected on the evidence above and on the capacity of a solo build.
 
-## Consequences if accepted
+## Consequences
 
 Fixes what is built in October and November 2026, and removes the most dangerous part of the guardrail gap, because read-only tools cannot cause harm through a manipulated call.
 ---
