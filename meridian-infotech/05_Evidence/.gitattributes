@@ -1,0 +1,4 @@
+# Evidence must stay byte-for-byte identical, or its recorded SHA-256 stops matching.
+# Stop Git from converting line endings in evidence data files.
+*.json -text
+*.txt  -text
