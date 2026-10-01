@@ -1,0 +1,475 @@
+{
+  "generated_at": "2026-10-01T07:13:19.545016+00:00",
+  "window_days": 14,
+  "regions": [
+    "us-east-1",
+    "ap-south-1"
+  ],
+  "events": [
+    {
+      "time": "2026-09-18T06:09:55+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-18T06:11:35+00:00",
+      "region": "us-east-1",
+      "event": "PasswordRecoveryRequested"
+    },
+    {
+      "time": "2026-09-18T06:12:52+00:00",
+      "region": "us-east-1",
+      "event": "PasswordRecoveryCompleted"
+    },
+    {
+      "time": "2026-09-18T06:12:59+00:00",
+      "region": "us-east-1",
+      "event": "PasswordRecoveryCompleted"
+    },
+    {
+      "time": "2026-09-18T06:13:41+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-18T06:29:51+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:30:13+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:30:21+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:30:26+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:31:23+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:31:33+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:37:27+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:38:31+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-18T06:38:31+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-18T06:39:31+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteVpcEndpoints"
+    },
+    {
+      "time": "2026-09-18T06:39:31+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteSecurityGroup"
+    },
+    {
+      "time": "2026-09-18T06:39:31+00:00",
+      "region": "ap-south-1",
+      "event": "DetachInternetGateway"
+    },
+    {
+      "time": "2026-09-18T06:39:32+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteSubnet"
+    },
+    {
+      "time": "2026-09-18T06:39:32+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteSubnet"
+    },
+    {
+      "time": "2026-09-18T06:39:32+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteInternetGateway"
+    },
+    {
+      "time": "2026-09-18T06:39:33+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteSubnet"
+    },
+    {
+      "time": "2026-09-18T06:39:33+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteSubnet"
+    },
+    {
+      "time": "2026-09-18T06:39:33+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteRouteTable"
+    },
+    {
+      "time": "2026-09-18T06:39:34+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteRouteTable"
+    },
+    {
+      "time": "2026-09-18T06:39:34+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteRouteTable"
+    },
+    {
+      "time": "2026-09-18T06:39:34+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteVpc"
+    },
+    {
+      "time": "2026-09-18T06:41:33+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-18T06:41:34+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-18T06:43:13+00:00",
+      "region": "ap-south-1",
+      "event": "DeleteDBCluster"
+    },
+    {
+      "time": "2026-09-18T06:48:55+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-18T06:48:56+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-18T06:48:57+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-18T06:48:58+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-18T06:52:20+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:52:31+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-18T06:52:54+00:00",
+      "region": "ap-south-1",
+      "event": "TerminateInstances"
+    },
+    {
+      "time": "2026-09-22T06:36:02+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-22T06:36:55+00:00",
+      "region": "us-east-1",
+      "event": "Preferences_ListPaymentProfiles"
+    },
+    {
+      "time": "2026-09-22T06:36:55+00:00",
+      "region": "us-east-1",
+      "event": "Preferences_BatchGetPaymentProfiles"
+    },
+    {
+      "time": "2026-09-22T06:36:55+00:00",
+      "region": "us-east-1",
+      "event": "CashApplication_GetAccountBalance"
+    },
+    {
+      "time": "2026-09-22T06:36:55+00:00",
+      "region": "us-east-1",
+      "event": "CashApplication_GetAccountBalance"
+    },
+    {
+      "time": "2026-09-22T06:36:55+00:00",
+      "region": "us-east-1",
+      "event": "Preferences_ListPaymentProfiles"
+    },
+    {
+      "time": "2026-09-22T06:36:55+00:00",
+      "region": "us-east-1",
+      "event": "Preferences_BatchGetPaymentProfiles"
+    },
+    {
+      "time": "2026-09-22T07:04:10+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T07:04:11+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T07:12:42+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-22T07:13:32+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-22T07:14:04+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T07:14:05+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T07:14:34+00:00",
+      "region": "us-east-1",
+      "event": "DeleteLoginProfile"
+    },
+    {
+      "time": "2026-09-22T07:14:37+00:00",
+      "region": "us-east-1",
+      "event": "DeleteUser"
+    },
+    {
+      "time": "2026-09-22T07:21:51+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T07:25:34+00:00",
+      "region": "us-east-1",
+      "event": "EnableMFADevice"
+    },
+    {
+      "time": "2026-09-22T07:42:17+00:00",
+      "region": "us-east-1",
+      "event": "CreateVirtualMFADevice"
+    },
+    {
+      "time": "2026-09-22T07:42:17+00:00",
+      "region": "us-east-1",
+      "event": "CreateVirtualMFADevice"
+    },
+    {
+      "time": "2026-09-22T07:48:41+00:00",
+      "region": "us-east-1",
+      "event": "EnableMFADevice"
+    },
+    {
+      "time": "2026-09-22T07:54:12+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-22T07:56:09+00:00",
+      "region": "us-east-1",
+      "event": "DeleteVirtualMFADevice"
+    },
+    {
+      "time": "2026-09-22T07:56:10+00:00",
+      "region": "us-east-1",
+      "event": "CreateVirtualMFADevice"
+    },
+    {
+      "time": "2026-09-22T07:57:07+00:00",
+      "region": "us-east-1",
+      "event": "EnableMFADevice"
+    },
+    {
+      "time": "2026-09-22T08:00:42+00:00",
+      "region": "us-east-1",
+      "event": "CreateGroup"
+    },
+    {
+      "time": "2026-09-22T08:00:43+00:00",
+      "region": "us-east-1",
+      "event": "AttachGroupPolicy"
+    },
+    {
+      "time": "2026-09-22T08:04:09+00:00",
+      "region": "us-east-1",
+      "event": "AddUserToGroup"
+    },
+    {
+      "time": "2026-09-22T08:04:09+00:00",
+      "region": "us-east-1",
+      "event": "CreateUser"
+    },
+    {
+      "time": "2026-09-22T08:04:10+00:00",
+      "region": "us-east-1",
+      "event": "CreateLoginProfile"
+    },
+    {
+      "time": "2026-09-22T08:25:34+00:00",
+      "region": "us-east-1",
+      "event": "DetachGroupPolicy"
+    },
+    {
+      "time": "2026-09-22T08:25:35+00:00",
+      "region": "us-east-1",
+      "event": "DeleteGroup"
+    },
+    {
+      "time": "2026-09-22T08:28:13+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-22T08:29:08+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-22T08:30:01+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:01+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:02+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:02+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:05+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:08+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:10+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:12+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:12+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:13+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:14+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:15+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:17+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:18+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:29+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:31+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T08:30:32+00:00",
+      "region": "ap-south-1",
+      "event": "Search"
+    },
+    {
+      "time": "2026-09-22T11:30:38+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-22T11:33:40+00:00",
+      "region": "us-east-1",
+      "event": "SetIAMAccessPreference"
+    },
+    {
+      "time": "2026-09-23T06:50:58+00:00",
+      "region": "us-east-1",
+      "event": "ConsoleLogin"
+    },
+    {
+      "time": "2026-09-23T08:11:17+00:00",
+      "region": "ap-south-1",
+      "event": "ConverseStream"
+    },
+    {
+      "time": "2026-09-23T08:11:38+00:00",
+      "region": "ap-south-1",
+      "event": "ConverseStream"
+    },
+    {
+      "time": "2026-09-23T08:12:14+00:00",
+      "region": "ap-south-1",
+      "event": "ConverseStream"
+    },
+    {
+      "time": "2026-09-23T08:13:09+00:00",
+      "region": "ap-south-1",
+      "event": "ConverseStream"
+    }
+  ]
+}
