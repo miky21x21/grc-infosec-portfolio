@@ -31,6 +31,7 @@
 | EV-010 | 23 Sep 2026 | Amazon Bedrock model availability in Mumbai, observed in the console; every invocation blocked at account level | 5.23 | Text below | Recorded |
 | EV-011 | 24 Sep 2026 | Terraform lab 01: an S3 bucket built from code with public access blocked, encryption, versioning and tags; an anonymous listing was refused while the owner's was allowed; destroyed in the same session | 5.15, 8.3, 8.9 | Text below; code in `07_Infrastructure/labs/tf-01-s3-public-block` | Recorded |
 | EV-012 | 24 Sep 2026 | CloudTrail reconciliation of root and admin activity, 18–24 September, against the root-activity record (F-08) | 8.2, 8.15, 8.16 | Text below | Recorded |
+| EV-013 | 1 Oct 2026 | Automated root-activity report: a Python script lists every root change across both regions for the last 14 days and seals the result with SHA-256. Its output reproduced every finding of the manual audit (EV-012) | 8.2, 8.15, 8.16 | Script `tools/root_activity.py`; data `lab/root_activity_2026-10-01.json`, SHA-256 `8bbe28bd7b82521a34e737fbacb04271592b434332b5a32ff97930dfeb72e25b` | Recorded |
 
 ### EV-007 — Toolchain versions (Git Bash, 22 Sep 2026)
 
@@ -125,15 +126,17 @@ The sign-in used an OAuth 2.0 authorization-code flow with PKCE (`code_challenge
 | F-03 | A generic IAM user from earlier tutorials still existed | Deleted (EV-002) |
 | F-04 | A tutorial EC2 key pair still existed in Mumbai | Closed: key pair deleted in AWS by `mitchell-admin` (EV-006, EV-012); local `.pem` file deleted on 24 Sep |
 | F-05 | The opt-in region Asia Pacific (Hyderabad) is enabled on the account | Kept as a future in-country failover region (MIC-DEC-010) |
-| F-06 | Every Amazon Bedrock model invocation fails with "ValidationException: Operation not allowed", in Mumbai and N. Virginia, despite full administrator permissions. Community reports attribute this to an account-level eligibility restriction on new accounts without billing history. **A dependency on a supplier's eligibility decision.** | Open: AWS support route identified; re-test after the first bill closes on 1 October; decision on a fallback by 15 October |
+| F-06 | Every Amazon Bedrock model invocation fails with "ValidationException: Operation not allowed", in Mumbai and N. Virginia, despite full administrator permissions. Community reports attribute this to an account-level eligibility restriction on new accounts without billing history. **A dependency on a supplier's eligibility decision.** | Open: re-tested on 1 October after the first bill closed, still blocked. AWS support case 179083783600232 opened the same day (Account Activation, Bedrock Allowlisting). Fallback decision by 15 October |
 | F-07 | The console was briefly used as root during the Bedrock test, a task that does not require root | Switched to `mitchell-admin`. CloudTrail confirms four model calls made as root (EV-012) |
 | F-08 | **The root-activity record, written from memory, was incomplete.** Reconciliation against CloudTrail found three root uses it omitted or understated: the 22 September billing check, the deletion of `DemoS3Access`, and the 23 September session, which began with a legitimate root-only screenshot. All root changes on 22 September matched intended actions; no unexplained activity was found. The log also shows the control changing behaviour: routine work was done as root on 18 September, and as `mitchell-admin` from 22 September. | Record corrected below. Practice: reconcile the record against CloudTrail after every root session |
+| F-09 | **The automated report (EV-013) found a root password recovery on 18 September** (`PasswordRecoveryRequested`, then `PasswordRecoveryCompleted`), which neither the record nor the manual audit had captured. A root password recovery is a high-attention event, because it is a common route to account takeover. | Confirmed by the owner on 1 October as legitimate (a forgotten root password). Added to the root-activity record |
 
 ## Root user activity record
 
 | Date | Purpose | Why root was required |
 |---|---|---|
-| 18 Sep 2026 | Tutorial clean-up in Mumbai (a security group deleted) | Root was the only identity; this predates the controls |
+| 18 Sep 2026 | Root password recovery (11:41–11:42 IST) | A forgotten root password, which only root's email recovery can reset. Found by EV-013 (F-09) |
+| 18 Sep 2026 | Tutorial clean-up in Mumbai: instances terminated; a VPC with its subnets, route tables, internet gateway and security group deleted; an RDS cluster deleted | Root was the only identity; this predates the controls |
 | 22 Sep 2026 | Check credits and plan status | IAM users could not yet see billing (activated at 17:03). Added after reconciliation (F-08) |
 | 22 Sep 2026 | Delete `UserA` | No other administrator existed yet |
 | 22 Sep 2026 | Assign root MFA: passkey, then a backup authenticator | Only root can manage root's own MFA |
@@ -143,7 +146,7 @@ The sign-in used an OAuth 2.0 authorization-code flow with PKCE (`code_challenge
 | 23 Sep 2026 | Screenshot of root's security credentials (EV-001) | Only visible to root |
 | 23 Sep 2026 | Bedrock playground test: four model calls | Not required: a mistake, noticed and corrected (F-07) |
 
-Verified against CloudTrail on 24 September 2026 (EV-012).
+Verified against CloudTrail on 24 September 2026 (EV-012) and again, automatically, on 1 October 2026 (EV-013).
 
 ## Build log
 
@@ -193,6 +196,13 @@ No changes to AWS; design and research only.
 - Decision recorded: infrastructure code lives in `07_Infrastructure`, and state files are never committed (MIC-DEC-011).
 - Working method written down as MIC-MTH-002.
 
+**1 October 2026 — Bedrock re-test and the first evidence script**
+
+- Re-tested Bedrock after the first billing cycle closed: still blocked. Opened AWS support case 179083783600232 under Account Activation, Bedrock Allowlisting (F-06).
+- Wrote the first evidence script (EV-013). Python's AWS library supports the keyless `aws login` session once `botocore[crt]` is installed.
+- Checked the script's output against the manual audit of 24 September: every event matched. Its complete 14-day view also surfaced a root password recovery on 18 September (F-09), confirmed as legitimate.
+- Protected evidence files from line-ending conversion, so their recorded fingerprints stay valid.
+
 ## Open actions
 
 - [x] Add a backup authenticator-app MFA device to root (22 Sep)
@@ -204,7 +214,8 @@ No changes to AWS; design and research only.
 - [ ] Set the CLI default region permanently: `aws configure set region ap-south-1`
 - [x] Capture and add the screenshots for EV-001, EV-003, EV-004, EV-005, EV-006 and EV-009 (23 Sep)
 - [x] Pin the console's default region to Mumbai (24 Sep)
-- [ ] Bedrock access (F-06): re-test after 1 October; decide on a fallback by 15 October
+- [ ] Bedrock access (F-06): follow up support case 179083783600232; decide on a fallback by 15 October
+- [ ] Evidence script v2: skip read-only events using CloudTrail's own read-only flag rather than name prefixes
 - [ ] Strip all rules from the default security groups, via Terraform (planned)
 - [ ] Run `aws logout` at the end of each working day
 - [ ] After every root session, reconcile the root-activity record against CloudTrail
