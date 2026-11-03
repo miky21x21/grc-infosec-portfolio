@@ -39,7 +39,7 @@ grc-infosec-portfolio/
 ├── meridian-infotech/              ← Meridian Sextant (flagship)
 │   ├── 00_Scope/                   ← scope, clients, residency, lab limits
 │   ├── 01_Methodology/             ← risk methodology, working method
-│   ├── 02_Registers/               ← risk register, AI system inventory
+│   ├── 02_Registers/               ← risk register, asset and AI inventories, SoAs
 │   ├── 03_Policies/                ← AI use and governance policy
 │   ├── 04_Assessments/             ← EU AI Act classification, cloud gap assessment plan
 │   ├── 05_Evidence/                ← evidence register, findings, build log, lab evidence
@@ -72,8 +72,10 @@ grc-infosec-portfolio/
 | AI use and governance policy (MIC-POL-001) | Meridian | Done |
 | EU AI Act classification (MIC-CLS-001) | Meridian | Done |
 | AWS lab controls and evidence (MIC-EVD-001) | Meridian | Ongoing |
-| Asset inventory (MIC-AST-001) | Meridian | Next |
-| Statement of Applicability | Meridian | Planned |
+| Asset inventory (MIC-AST-001) | Meridian | Done |
+| Statement of Applicability: ISO/IEC 27001 (MIC-SOA-001, 93 controls) | Meridian | Done |
+| Statement of Applicability: ISO/IEC 42001 (MIC-SOA-002, 38 controls) | Meridian | Done |
+| AI system impact assessment | Meridian | Next |
 | Cloud gap assessment (MIC-GAP-001) | Meridian | Plan written; to be re-scoped before fieldwork |
 | Evidence pack (HV-AIG-PACK-001 v1.1) | Harrow & Vale | Done |
 
