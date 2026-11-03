@@ -1,47 +1,33 @@
-# GRC & Information Security Portfolio
+# AI Governance & Cloud GRC Portfolio
 
-**Mitchell Swapnil Chatterjee**
-Information Security / GRC Analyst — CompTIA Security+ scheduled October 2026
-[LinkedIn](https://www.linkedin.com/in/mitchell-chatterjee-7a042b287) · [mitchell.s.chatterjee@gmail.com](mailto:mitchell.s.chatterjee@gmail.com)
+**Mitchell Swapnil Chatterjee** · AI governance and cloud GRC
+[LinkedIn](https://www.linkedin.com/in/mitchell-chatterjee-7a042b287) · [mitchellswapnil.com](https://mitchellswapnil.com)
 
-> **Disclosure:** Every organisation in this repository is fictional. All scenarios,
-> data, findings and evidence are self-directed training exercises created to
-> demonstrate GRC methodology. No real client, employer or production data is
-> represented anywhere in this repository.
+> **Disclosure:** Every organisation in this repository is fictional. Scenarios, clients and their data are self-directed exercises created to demonstrate GRC and AI governance work. Where a record describes the AWS lab environment, that environment is real and operated personally by the author. No real client, employer or production data appears anywhere in this repository.
 
 ---
 
-## What this portfolio demonstrates
+## Two projects, two ends of the AI market
 
-Two end-to-end programmes, each traceable from context and scope through risk
-identification, control selection, assessment and remediation tracking.
-
-| Project | Sector | Regulatory drivers | Control frameworks |
+| Project | Who | AI role | What it shows |
 | :--- | :--- | :--- | :--- |
-| [Meridian Infotech Consultancy](./meridian-infotech/) | IT services delivery — applications, cloud and AI — to US/EU banking clients | DPDP Act 2023, CERT-In Directions 2022, GDPR (processor), EU AI Act, client contractual flow-down | ISO/IEC 27001:2022, ISO/IEC 42001:2023, SOC 2 Type II |
-| [Divine Healthcare](./divine-healthcare/) | US healthcare provider | HIPAA Security Rule | NIST CSF 2.0 |
+| [**Meridian Sextant**](./meridian-infotech/) | 320-person AI platform unit of a fictional Indian IT services firm, serving five regulated banks in the US, EU and India | **Builds and provides** AI systems | An AI and information security management system built and evidenced on a real AWS account: scope, 12 decision records, a risk register crosswalked to nine frameworks, an AI system inventory, AI policy, EU AI Act classification, Terraform, and hash-verified evidence |
+| [**Harrow & Vale LLP**](./harrow-vale-ai-governance/) | 48-person accounting firm in Ohio and Manchester | **Uses** third-party AI tools | A complete white-label AI governance evidence pack: shadow-AI discovery, tool decisions, a one-page policy, training records and evidence-backed answers to a customer's security questionnaire |
 
-The two projects are deliberately different. Meridian is an Indian delivery
-organisation carrying simultaneous Indian and international obligations across
-cloud and AI workloads, and is where the multi-framework control crosswalk lives.
-Divine Healthcare is a single-jurisdiction US scenario built on HIPAA and NIST CSF,
-which exercises depth against one regulation rather than reconciliation across
-several.
+Meridian goes deep: one organisation, many obligations, real cloud controls. Harrow & Vale goes practical: what a small firm actually needs when its biggest customer starts asking about AI.
 
 ---
 
-## Traceability model
+## How the work is traced
 
-Both programmes follow the same chain, so any control can be traced backwards to
-the risk that justified it and forwards to the evidence that proves it operates:
+Both projects follow the same chain, so any control can be traced back to the risk that justified it and forward to the evidence that proves it operates:
 
 ```
-Context & Scope → Risk Assessment → Risk Register → Control Selection (SoA)
-      → Policies & Standards → Control Assessment → Findings → Remediation → Evidence
+Context & Scope → Risk Assessment → Risk Register → Controls and Decisions
+      → Policies → Assessments → Findings → Remediation → Evidence
 ```
 
-Every artifact carries a document ID, version and date. Registers are published as
-CSV so they render as tables in the browser.
+Every artifact carries a document ID, version and date. Decisions are recorded with their alternatives and consequences, and findings stay in the record even when they show the author's own mistakes (see Meridian's F-08 and F-09).
 
 ---
 
@@ -50,55 +36,45 @@ CSV so they render as tables in the browser.
 ```
 grc-infosec-portfolio/
 ├── README.md
-├── meridian-infotech/
-│   ├── README.md              ← scenario, scope statement, framework rationale
-│   ├── 00_Scope/              ← context, interested parties, scope boundary
-│   ├── 01_Methodology/        ← risk assessment methodology, scoring rubrics
-│   ├── 02_Registers/          ← asset inventory, risk register, SoA
-│   ├── 03_Policies/           ← policies and standards
-│   ├── 04_Assessments/        ← cloud gap assessment, control testing, findings
-│   └── 05_Evidence/           ← evidence index (EV-xxx)
-├── divine-healthcare/         ← HIPAA / NIST CSF scenario, not yet started
-└── foundations/               ← study notes, not portfolio deliverables
+├── meridian-infotech/              ← Meridian Sextant (flagship)
+│   ├── 00_Scope/                   ← scope, clients, residency, lab limits
+│   ├── 01_Methodology/             ← risk methodology, working method
+│   ├── 02_Registers/               ← risk register, AI system inventory
+│   ├── 03_Policies/                ← AI use and governance policy
+│   ├── 04_Assessments/             ← EU AI Act classification, cloud gap assessment plan
+│   ├── 05_Evidence/                ← evidence register, findings, build log, lab evidence
+│   ├── 06_Decisions/               ← decision records MIC-DEC-001 to 012
+│   └── 07_Infrastructure/          ← Terraform
+├── harrow-vale-ai-governance/      ← small-business AI governance sample pack
+└── foundations/                    ← study notes, not portfolio deliverables
 ```
 
 ---
 
 ## Frameworks and standards referenced
 
-**Management systems and control frameworks**
+**Management systems and control frameworks:** ISO/IEC 42001:2023 (AI management system, Annex A.2 to A.10) · ISO/IEC 27001:2022 · NIST AI RMF 1.0 · NIST CSF 2.0 · SOC 2 Trust Services Criteria · CIS AWS Foundations Benchmark
 
-- **ISO/IEC 27001:2022** — ISMS clauses 4–10 and Annex A controls
-- **ISO/IEC 42001:2023** — AI management system; Annex A controls A.2–A.10
-- **ISO/IEC 27005** — risk management methodology
-- **SOC 2 Type II** — Trust Services Criteria (Security, Confidentiality, Availability)
-- **NIST CSF 2.0** — Govern, Identify, Protect, Detect, Respond, Recover
-- **CIS AWS Foundations Benchmark** — cloud configuration baseline
+**Regulation:** EU AI Act (Regulation 2024/1689, as amended by the 2026 Digital Omnibus) · DORA · GDPR and UK GDPR · India's DPDP Act 2023 · CERT-In Directions 2022 · RBI directions and FREE-AI expectations · FTC Safeguards Rule · IRC §7216
 
-**Regulation**
-
-- **Digital Personal Data Protection Act, 2023 (India)**
-- **CERT-In Directions, April 2022** — incident reporting and log retention
-- **GDPR** — processor obligations (Articles 28, 32, 33)
-- **EU AI Act (Regulation 2024/1689)**, as amended by the Digital Omnibus on AI
-  (in force 27 July 2026) — Article 50 transparency applicable from 2 August 2026;
-  Annex III high-risk obligations deferred to 2 December 2027
-- **HIPAA Security Rule** (Divine Healthcare)
+**Questionnaires:** Shared Assessments SIG · CSA AI-CAIQ
 
 ---
 
-## Status
+## Status (3 November 2026)
 
 | Artifact | Project | Status |
 | :--- | :--- | :--- |
-| Context & scope | Meridian | Drafted |
-| Risk assessment methodology | Meridian | Drafted |
-| Risk register | Meridian | In progress — 8 rows of a target 15–20 |
-| Asset inventory | Meridian | Not started |
+| Scope (MIC-SCP-001 v2.1) | Meridian | Done |
+| Decision records MIC-DEC-001 to 012 | Meridian | Done |
+| Risk register (MIC-RSK-001 v2.0, 11 risks) | Meridian | Done |
+| AI system inventory (MIC-INV-001) | Meridian | Done |
+| AI use and governance policy (MIC-POL-001) | Meridian | Done |
+| EU AI Act classification (MIC-CLS-001) | Meridian | Done |
+| AWS lab controls and evidence (MIC-EVD-001) | Meridian | Ongoing |
+| Asset inventory (MIC-AST-001) | Meridian | Next |
 | Statement of Applicability | Meridian | Planned |
-| Access control standard | Meridian | Planned |
-| Cloud control gap assessment | Meridian | Scoped — fieldwork not started |
-| All artifacts | Divine Healthcare | Not started |
+| Cloud gap assessment (MIC-GAP-001) | Meridian | Plan written; to be re-scoped before fieldwork |
+| Evidence pack (HV-AIG-PACK-001 v1.1) | Harrow & Vale | Done |
 
-This table is maintained honestly. Planned means planned, and not started means
-nothing has been written yet.
+This table is kept honest: planned means planned, and next means not yet written.
