@@ -5,7 +5,8 @@
 | MIC-RSK-001 | [Risk register](./MIC-RSK-001_Risk_Register.csv) | Version 2.0, 3 November 2026: 11 risks for the Meridian Sextant scope |
 | MIC-INV-001 | [AI system inventory](./MIC-INV-001_AI_System_Inventory.md) | Version 1.0, 3 November 2026 |
 | MIC-AST-001 | [Asset inventory](./MIC-AST-001_Asset_Inventory.md) | Version 1.0, 3 November 2026 |
-| MIC-SOA-001 | Statement of Applicability | Planned |
+| MIC-SOA-001 | [Statement of Applicability: ISO/IEC 27001:2022](./MIC-SOA-001_SoA_ISO27001.csv) | Version 1.0, 3 November 2026: all 93 Annex A controls |
+| MIC-SOA-002 | Statement of Applicability: ISO/IEC 42001:2023 | Next |
 
 Registers are published as CSV or Markdown so they render as tables in the browser.
 
@@ -27,6 +28,21 @@ MIC-RSK-001 carries nine framework columns so that one control set can be traced
 Blank cells are meaningful. A risk with no ISO/IEC 42001 or EU AI Act mapping has no AI dimension, and saying so is more useful than forcing a reference. ISO/IEC 42001 references are given at Annex A control-group level (A.2 to A.10).
 
 Where an EU AI Act article is cited for a system that is not high-risk, the column says the principle is **applied voluntarily**. MIC-CLS-001 records why the v1 products are not high-risk.
+
+## How to read the Statements of Applicability
+
+Every Annex A control is listed, applicable or not. **Implementation status** is stated plainly:
+
+| Status | Meaning |
+|---|---|
+| Implemented (lab) | Built in the real AWS lab account and evidenced in MIC-EVD-001 |
+| Partly implemented (lab) | Some of the control is built and evidenced; the rest is designed |
+| Designed | Specified in a decision, policy or register, but not built |
+| Planned | Accepted as needed; not yet specified |
+| Inherited | Provided by Meridian group functions or by AWS under shared responsibility. For the simulated company these are stated, not evidenced |
+| Excluded | Not applicable, with the reason given |
+
+Most controls are Designed because the company is simulated. Only what the lab account proves is marked Implemented.
 
 ## Open gaps in this register
 
