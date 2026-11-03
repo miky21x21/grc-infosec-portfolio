@@ -1,0 +1,246 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>AI Governance Evidence Pack — Harrow & Vale LLP</title>
+<style>
+@page{size:A4;margin:16mm 15mm 18mm 15mm}
+*{box-sizing:border-box}
+body{font-family:"Helvetica Neue",Arial,sans-serif;color:#1d2433;font-size:9.6pt;line-height:1.45;margin:0}
+h1{font-size:24pt;margin:0 0 6px;color:#0f2a4a}
+h2{font-size:14pt;color:#0f2a4a;border-bottom:2px solid #0f2a4a;padding-bottom:4px;margin:0 0 10px}
+h3{font-size:10.5pt;color:#0f2a4a;margin:12px 0 4px}
+p{margin:0 0 7px}
+.page{page-break-after:always}
+.page:last-child{page-break-after:auto}
+table{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:8.3pt}
+th{background:#0f2a4a;color:#fff;text-align:left;padding:5px;font-weight:600}
+td{border-bottom:1px solid #d5dbe5;padding:5px;vertical-align:top}
+tr:nth-child(even) td{background:#f5f7fa}
+.meta td{font-size:9pt;background:none!important;border:none;padding:3px 6px 3px 0}
+.meta td:first-child{color:#5a6577;width:34%}
+.tag{display:inline-block;padding:1px 6px;border-radius:3px;font-size:7.6pt;font-weight:700;white-space:nowrap}
+.ok{background:#dff3e6;color:#17663a}.re{background:#fff1d6;color:#8a5a00}.no{background:#fde2e1;color:#a12622}
+.box{border:1px solid #c9d2df;background:#f5f7fa;padding:9px 11px;border-radius:4px;margin:8px 0}
+.warn{border-color:#e7c27a;background:#fff8e8}
+.brand{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c9d2df;padding-bottom:8px;margin-bottom:60px}
+.logo{border:2px dashed #8a97ab;color:#5a6577;padding:10px 16px;font-weight:700;font-size:9pt}
+.small{font-size:8pt;color:#5a6577}
+ol,ul{margin:2px 0 8px 18px;padding:0}
+li{margin:0 0 3px}
+.ref{color:#5a6577;font-size:7.6pt}
+.sig{display:flex;gap:20px;margin-top:10px}
+.sig div{flex:1;border-top:1px solid #1d2433;padding-top:4px;font-size:8.3pt}
+</style></head><body>
+
+<!-- COVER -->
+<div class="page">
+<div class="brand"><div class="logo">[ YOUR MSP LOGO ]</div><div class="small">Delivered under your brand · White-label sample</div></div>
+<div class="small" style="letter-spacing:2px;text-transform:uppercase">AI Governance Evidence Pack</div>
+<h1>Harrow &amp; Vale LLP</h1>
+<p style="font-size:12pt;color:#41506a">AI inventory, use policy, approvals, staff training and security-questionnaire responses</p>
+<table class="meta" style="margin-top:22px;width:75%">
+<tr><td>Document ID</td><td>HV-AIG-PACK-001 · Version 1.1</td></tr>
+<tr><td>Status</td><td>Approved by client, 27 October 2026</td></tr>
+<tr><td>Engagement period</td><td>6 – 27 October 2026 (15 working days)</td></tr>
+<tr><td>Trigger</td><td>Supplier security questionnaire (SIG-based, with AI section) from the firm's largest client, a regional bank; due 5 November 2026</td></tr>
+<tr><td>Client owner</td><td>Dana Whitlock, Managing Partner</td></tr>
+<tr><td>Client AI governance lead</td><td>Priya Raman, Director of Operations &amp; IT</td></tr>
+<tr><td>Prepared by</td><td>[MSP name] AI Governance Services</td></tr>
+<tr><td>Next review</td><td>27 January 2027 (quarterly)</td></tr>
+</table>
+<h3 style="margin-top:26px">Contents</h3>
+<ol>
+<li>Engagement summary and findings</li>
+<li>AI system inventory (HV-AIG-INV-001)</li>
+<li>AI acceptable use policy (HV-AIG-POL-001)</li>
+<li>Tool approvals log (HV-AIG-APR-001)</li>
+<li>AI literacy training record (HV-AIG-TRN-001)</li>
+<li>Security questionnaire — AI section responses (HV-AIG-QST-001)</li>
+<li>Evidence index and framework mapping (HV-AIG-EVD-001)</li>
+</ol>
+<div class="box warn" style="margin-top:30px"><b>Sample document.</b> Harrow &amp; Vale LLP, its people, client and engagement are fictional. This pack shows the format and depth of a real delivery. Questionnaire wording is paraphrased, not copied from licensed questionnaires. In live engagements every answer is verified with the client and signed off by them before submission.</div>
+</div>
+
+<!-- 1 SUMMARY -->
+<div class="page">
+<h2>1. Engagement summary</h2>
+<h3>About the client</h3>
+<p>Harrow &amp; Vale LLP is an accounting, tax and advisory firm with 48 staff: 42 in Columbus, Ohio, and 6 in Manchester, UK. It prepares tax returns, audits and advisory work for about 900 businesses and individuals. IT runs on Microsoft 365 Business Premium, managed by [MSP name]. Staff mostly use ChatGPT and Claude; Microsoft 365 Copilot Chat is available to everyone through their work sign-in.</p>
+<h3>Why this work happened</h3>
+<p>On 2 October 2026 the firm's largest client, a regional bank, sent its annual supplier security questionnaire. This year it contained a new section of 14 questions on AI: inventory, policy, approvals, data handling, training and third-party AI. The firm had no written answers and no evidence behind them.</p>
+<h3>What we found (discovery, 6 – 10 October)</h3>
+<table>
+<tr><th style="width:24%">Area</th><th>Finding</th><th style="width:12%">Severity</th></tr>
+<tr><td>Inventory</td><td>9 AI tools in use; leadership knew of 3. Found via Microsoft Defender for Cloud Apps discovery, Entra ID enterprise-app consents, a 10-question staff survey (44 of 48 replied) and interviews with 4 team leads.</td><td><span class="tag re">High</span></td></tr>
+<tr><td>Client data in personal AI</td><td>11 staff used personal ChatGPT, Gemini or Claude accounts for work; 4 said they had pasted client financial details. US tax return information has use and disclosure limits (IRC §7216) and is in scope of the FTC Safeguards Rule.</td><td><span class="tag no">Critical</span></td></tr>
+<tr><td>Meeting bots</td><td>A free AI note-taker was joining client calls from 3 staff calendars, recording without a consent step and storing transcripts with the vendor.</td><td><span class="tag no">Critical</span></td></tr>
+<tr><td>Policy</td><td>No AI policy. The 2023 acceptable use policy does not mention AI.</td><td><span class="tag re">High</span></td></tr>
+<tr><td>Approvals</td><td>No approval route for new AI tools or AI features in existing software.</td><td><span class="tag re">High</span></td></tr>
+<tr><td>Training</td><td>No AI training or acknowledgement records.</td><td><span class="tag re">Medium</span></td></tr>
+<tr><td>Paid AI accounts</td><td>9 staff paid for ChatGPT Plus or Claude Pro on personal or company cards. No business workspace, no single sign-on, no admin control, and accounts would stay with the person if they left.</td><td><span class="tag re">High</span></td></tr>
+</table>
+<h3>What changed (11 – 27 October)</h3>
+<ul>
+<li>Inventory of 9 tools with a decision for each: 4 approved, 3 restricted, 2 banned (section 2).</li>
+<li>One-page AI acceptable use policy approved by the Managing Partner on 20 October (section 3).</li>
+<li>ChatGPT Business and Claude Team workspaces set up on 15 October with Entra ID single sign-on and verified company domain; 9 paid personal accounts closed and staff moved across. Uploads to personal AI and the note-taker blocked in Defender for Cloud Apps; note-taker app consent revoked in Entra ID on 14 October.</li>
+<li>45-minute AI literacy session delivered twice; 48 of 48 staff trained and acknowledged by 24 October (section 5).</li>
+<li>14 questionnaire answers drafted, verified with the client and approved for submission (section 6).</li>
+</ul>
+<div class="box"><b>Open items</b> (tracked, owner Priya Raman): renew the tax software vendor's AI addendum by 31 Dec 2026 (APR-007); confirm the website chatbot vendor's data retention in writing by 15 Nov 2026 (APR-008); quarterly review on 27 Jan 2027.</div>
+</div>
+
+<!-- 2 INVENTORY -->
+<div class="page">
+<h2>2. AI system inventory <span class="small">HV-AIG-INV-001 · as at 27 Oct 2026</span></h2>
+<p>Every AI tool or AI feature used for firm work, how it was found, what data it may touch and the decision taken. Data classes: <b>Public</b>, <b>Internal</b>, <b>Confidential</b> (client financial and tax data, HR, personal data).</p>
+<table>
+<tr><th style="width:6%">ID</th><th style="width:16%">Tool / feature</th><th style="width:12%">Owner</th><th style="width:11%">Users</th><th style="width:19%">Use and data</th><th style="width:10%">Decision</th><th>Conditions / controls</th></tr>
+<tr><td>AI-01</td><td>ChatGPT Business (company workspace)</td><td>P. Raman</td><td>22 seats</td><td>Drafting, summaries, spreadsheet analysis. Up to Confidential.</td><td><span class="tag ok">Approved</span></td><td>Business terms: workspace data not used for model training. Entra ID SSO; domain verified so staff cannot create stray workspaces. Memory off; no third-party connectors without approval.</td></tr>
+<tr><td>AI-02</td><td>Claude Team (company workspace)</td><td>Advisory lead</td><td>8 seats</td><td>Long-document review, report drafting. Up to Confidential.</td><td><span class="tag ok">Approved</span></td><td>Commercial terms: no training on firm data by default. SSO; projects shared only within engagement teams. Connectors off unless approved.</td></tr>
+<tr><td>AI-03</td><td>Microsoft 365 Copilot Chat (free, work sign-in)</td><td>P. Raman</td><td>All staff</td><td>General drafting and research. Up to Internal.</td><td><span class="tag ok">Approved</span></td><td>Work account only, enterprise data protection. No client names or figures.</td></tr>
+<tr><td>AI-04</td><td>Teams Premium meeting recap</td><td>P. Raman</td><td>Partners, managers</td><td>Internal meeting notes. Client calls only with consent.</td><td><span class="tag ok">Approved</span></td><td>Consent line read at start of client calls; transcripts kept 90 days.</td></tr>
+<tr><td>AI-05</td><td>Tax &amp; practice software AI assistant (vendor-embedded)</td><td>Tax partner</td><td>Tax team (17)</td><td>Research and return review. Confidential.</td><td><span class="tag re">Restricted</span></td><td>Research mode only until vendor AI addendum is renewed (APR-007). Reviewer signs every return as usual.</td></tr>
+<tr><td>AI-06</td><td>Website chatbot (vendor-hosted)</td><td>Marketing lead</td><td>Public visitors</td><td>Answers FAQs, books calls. Public; captures name and email.</td><td><span class="tag re">Restricted</span></td><td>Tells visitors they are talking to AI. No tax or account questions; hands off to staff. Retention to be confirmed (APR-008).</td></tr>
+<tr><td>AI-07</td><td>ChatGPT, Gemini, Claude — personal accounts</td><td>—</td><td>11 found</td><td>Was used with client data.</td><td><span class="tag re">Restricted</span></td><td>Public data only, never client or firm data. Uploads blocked in Defender for Cloud Apps. Staff moved to AI-01 and AI-02.</td></tr>
+<tr><td>AI-08</td><td>Free AI meeting note-taker bot</td><td>—</td><td>3 calendars</td><td>Recorded client calls without consent.</td><td><span class="tag no">Banned</span></td><td>App consent revoked; domain blocked; vendor asked to delete stored recordings (confirmation on file, EV-09).</td></tr>
+<tr><td>AI-09</td><td>Browser AI extensions (summarisers, PDF chat)</td><td>—</td><td>5 devices</td><td>Read page content, including client portals.</td><td><span class="tag no">Banned</span></td><td>Removed via Intune; extension allow-list enforced in Edge and Chrome.</td></tr>
+</table>
+<p class="small">Discovery sources: Defender for Cloud Apps (30-day log, 6 Oct), Entra ID enterprise apps and consents, Intune device extension report, staff survey (44/48 responses), 4 team-lead interviews. New tools are added only through the approval route in the policy.</p>
+</div>
+
+<!-- 3 POLICY -->
+<div class="page">
+<h2>3. AI acceptable use policy <span class="small">HV-AIG-POL-001 · v1.0 · effective 21 Oct 2026</span></h2>
+<p><b>Purpose.</b> To let our people use AI to work better while protecting client data, meeting our legal duties and keeping professional judgment with a person.</p>
+<p><b>Applies to</b> all partners, staff, contractors and interns in the US and UK, on any device used for firm work.</p>
+<h3>1. Use only approved tools</h3>
+<p>The approved list is the AI inventory (HV-AIG-INV-001), kept on the intranet. If a tool is not on it, do not use it for firm work. This includes AI features newly switched on inside software we already use.</p>
+<h3>2. Match the data to the tool</h3>
+<table>
+<tr><th>Data</th><th>Examples</th><th>Allowed in</th></tr>
+<tr><td>Public</td><td>Published tax guidance, our website</td><td>Any approved tool; personal AI accounts</td></tr>
+<tr><td>Internal</td><td>Templates, internal notes without client details</td><td>AI-01, AI-02, AI-03, AI-04</td></tr>
+<tr><td>Confidential</td><td>Client financial and tax data, personal data, HR, engagement letters</td><td>AI-01 and AI-02 (company workspaces only, signed in with your work account), and AI-05 in its approved mode</td></tr>
+</table>
+<p>Never enter passwords, bank or card numbers, or Social Security / National Insurance numbers into any AI tool.</p>
+<h3>3. A person stays responsible</h3>
+<p>You own anything you send, file or sign, whoever drafted it. Check AI output against source documents. AI must not make final decisions on tax positions, audit opinions, hiring or client acceptance.</p>
+<h3>4. Be open about AI</h3>
+<p>Ask for consent before any AI transcription of a client call. Our website chatbot must say it is AI. Tell your manager if AI produced a material part of a client deliverable.</p>
+<h3>5. New tools and features</h3>
+<p>Request through the IT helpdesk form "AI tool request". The AI governance lead decides within 5 working days, using the approval checklist (data use, training on our data, retention, location, security terms, US and UK privacy terms). Decisions are logged in HV-AIG-APR-001.</p>
+<h3>6. Training</h3>
+<p>Everyone completes AI literacy training on joining and once a year, and acknowledges this policy.</p>
+<h3>7. Report problems</h3>
+<p>If client data went into an unapproved tool, or AI output caused an error, tell the AI governance lead the same day. We handle it as a security incident under the incident response plan; no blame for reporting promptly.</p>
+<h3>8. Breaches and review</h3>
+<p>Breaches are handled under the staff handbook. The policy is reviewed every 12 months, or sooner if the law, our tools or our clients' requirements change.</p>
+<table class="meta"><tr><td>Owner</td><td>Priya Raman, Director of Operations &amp; IT</td></tr><tr><td>Approved by</td><td>Dana Whitlock, Managing Partner — 20 Oct 2026</td></tr></table>
+</div>
+
+<!-- 4 APPROVALS -->
+<div class="page">
+<h2>4. Tool approvals log <span class="small">HV-AIG-APR-001</span></h2>
+<p>Each decision checks: what data the tool sees; whether the vendor trains on it; retention and deletion; where data is stored; security terms (SOC 2 / ISO 27001 report or equivalent); and whether US and UK privacy terms are covered.</p>
+<table>
+<tr><th style="width:8%">Ref</th><th style="width:8%">Tool</th><th style="width:11%">Date</th><th style="width:12%">Decision</th><th>Basis</th><th style="width:13%">Decided by</th><th style="width:11%">Review</th></tr>
+<tr><td>APR-001</td><td>AI-01</td><td>13 Oct 2026</td><td><span class="tag ok">Approved</span></td><td>Business terms exclude training on workspace data; DPA signed; SSO and domain verification required before go-live (done 15 Oct).</td><td>P. Raman; D. Whitlock</td><td>Jan 2027</td></tr>
+<tr><td>APR-002</td><td>AI-02</td><td>13 Oct 2026</td><td><span class="tag ok">Approved</span></td><td>Commercial terms exclude training by default; DPA signed; limited to advisory and audit teams who asked for it.</td><td>P. Raman; D. Whitlock</td><td>Jan 2027</td></tr>
+<tr><td>APR-003</td><td>AI-03</td><td>13 Oct 2026</td><td><span class="tag ok">Approved</span></td><td>Included with M365; work sign-in gives enterprise data protection. Limited to Internal data for simplicity.</td><td>P. Raman</td><td>Jan 2027</td></tr>
+<tr><td>APR-004</td><td>AI-04</td><td>13 Oct 2026</td><td><span class="tag ok">Approved</span></td><td>Inside M365 tenant; consent script added to client-call template.</td><td>P. Raman</td><td>Jan 2027</td></tr>
+<tr><td>APR-005</td><td>AI-07</td><td>14 Oct 2026</td><td><span class="tag re">Restricted</span></td><td>Consumer terms; no firm control over retention or training settings. Public data only.</td><td>P. Raman; D. Whitlock</td><td>Jan 2027</td></tr>
+<tr><td>APR-006</td><td>AI-08</td><td>14 Oct 2026</td><td><span class="tag no">Banned</span></td><td>Recorded clients without consent; vendor keeps recordings; no business agreement.</td><td>D. Whitlock</td><td>—</td></tr>
+<tr><td>APR-007</td><td>AI-05</td><td>17 Oct 2026</td><td><span class="tag re">Restricted</span></td><td>Vendor AI terms expire 31 Dec 2026; research mode only until renewed addendum confirms no training on client data and §7216 handling.</td><td>Tax partner; P. Raman</td><td>31 Dec 2026</td></tr>
+<tr><td>APR-008</td><td>AI-06</td><td>17 Oct 2026</td><td><span class="tag re">Restricted</span></td><td>Public FAQ only, AI disclosure shown, hands off to staff. Written retention terms requested.</td><td>P. Raman</td><td>15 Nov 2026</td></tr>
+<tr><td>APR-009</td><td>AI-09</td><td>14 Oct 2026</td><td><span class="tag no">Banned</span></td><td>Extensions can read client portal pages; no business need that AI-01 doesn't meet.</td><td>P. Raman</td><td>—</td></tr>
+</table>
+</div>
+
+<!-- 5 TRAINING -->
+<div class="page">
+<h2>5. AI literacy training record <span class="small">HV-AIG-TRN-001</span></h2>
+<table class="meta">
+<tr><td>Session</td><td>"Using AI safely at Harrow &amp; Vale" — 45 minutes, live on Teams, recorded</td></tr>
+<tr><td>Delivered</td><td>22 Oct 2026, 10:00 ET (US) and 23 Oct 2026, 14:00 UK (Manchester); recording for 3 absentees</td></tr>
+<tr><td>Trainer</td><td>[MSP name] AI Governance Services</td></tr>
+<tr><td>Check</td><td>8-question quiz, pass mark 7/8; then policy acknowledgement in Microsoft Forms</td></tr>
+</table>
+<h3>Content</h3>
+<ol>
+<li>What AI tools do well and badly: confident wrong answers, invented citations, out-of-date tax rules.</li>
+<li>Our approved tools (ChatGPT Business, Claude Team, Copilot Chat) and what each may be used for; how to sign in to the company workspace, not a personal account.</li>
+<li>Data rules with real examples: which client documents may go where.</li>
+<li>Client calls and consent; the website chatbot.</li>
+<li>Checking output: three-step review for anything going to a client.</li>
+<li>How to request a new tool and how to report a mistake.</li>
+</ol>
+<h3>Completion by team</h3>
+<table>
+<tr><th>Team</th><th>Headcount</th><th>Trained</th><th>Quiz passed</th><th>Policy acknowledged</th><th>Completed by</th></tr>
+<tr><td>Partners</td><td>6</td><td>6</td><td>6</td><td>6</td><td>22 Oct</td></tr>
+<tr><td>Tax</td><td>17</td><td>17</td><td>17</td><td>17</td><td>24 Oct</td></tr>
+<tr><td>Audit &amp; assurance</td><td>11</td><td>11</td><td>11</td><td>11</td><td>23 Oct</td></tr>
+<tr><td>Advisory (incl. Manchester 6)</td><td>8</td><td>8</td><td>8</td><td>8</td><td>23 Oct</td></tr>
+<tr><td>Operations, IT, marketing</td><td>6</td><td>6</td><td>6</td><td>6</td><td>22 Oct</td></tr>
+<tr><td><b>Total</b></td><td><b>48</b></td><td><b>48</b></td><td><b>48</b> (3 on second attempt)</td><td><b>48</b></td><td><b>24 Oct</b></td></tr>
+</table>
+<p class="small">Named attendance export (Teams report), quiz results and acknowledgements (Forms export) are held as EV-11 to EV-13. New starters complete the recording and quiz in their first week; annual refresher due October 2027.</p>
+</div>
+
+<!-- 6 QUESTIONNAIRE -->
+<div class="page">
+<h2>6. Security questionnaire — AI section <span class="small">HV-AIG-QST-001</span></h2>
+<p class="small">Questions paraphrased from the client's SIG-based questionnaire. Answers approved by D. Whitlock on 27 Oct 2026. Each answer points to evidence in section 7.</p>
+<table>
+<tr><th style="width:5%">#</th><th style="width:27%">Question</th><th style="width:7%">Answer</th><th>Response</th><th style="width:10%">Evidence</th></tr>
+<tr><td>1</td><td>Do you keep an inventory of AI systems and AI features used to deliver services?</td><td>Yes</td><td>Inventory of 9 tools with owner, users, data class and decision, updated through the approval route and reviewed quarterly.</td><td>EV-01, EV-02</td></tr>
+<tr><td>2</td><td>Do you have a documented AI use policy, approved by management?</td><td>Yes</td><td>AI acceptable use policy approved by the Managing Partner on 20 Oct 2026, reviewed annually.</td><td>EV-03</td></tr>
+<tr><td>3</td><td>Has the policy been communicated to and acknowledged by staff?</td><td>Yes</td><td>48 of 48 staff acknowledged by 24 Oct 2026; required at onboarding.</td><td>EV-13</td></tr>
+<tr><td>4</td><td>Is there a process to approve new AI tools before use?</td><td>Yes</td><td>Helpdesk request; decision within 5 working days against a written checklist; logged.</td><td>EV-04</td></tr>
+<tr><td>5</td><td>Will our data be processed by AI? If so, which systems?</td><td>Yes, limited</td><td>Only in our company ChatGPT Business and Claude Team workspaces (single sign-on, no training on our data), and the tax software assistant in research mode. No other AI tool may receive your data.</td><td>EV-01, EV-04</td></tr>
+<tr><td>6</td><td>Is our data used to train AI models?</td><td>No</td><td>Approved tools' contract terms exclude training on our content. Tools without such terms are restricted to public data or banned.</td><td>EV-05</td></tr>
+<tr><td>7</td><td>How do you stop staff using unapproved AI with client data?</td><td>Controls</td><td>Policy and training; uploads to personal AI blocked in Defender for Cloud Apps; browser extension allow-list via Intune; monthly discovery report.</td><td>EV-06, EV-07</td></tr>
+<tr><td>8</td><td>Is AI output reviewed by a person before it affects us?</td><td>Yes</td><td>Policy section 3: a named person is accountable for every deliverable; AI cannot make final tax, audit or acceptance decisions.</td><td>EV-03</td></tr>
+<tr><td>9</td><td>Do you provide AI training to staff?</td><td>Yes</td><td>45-minute AI literacy training with a quiz; 100% completion; annual refresher.</td><td>EV-11, EV-12</td></tr>
+<tr><td>10</td><td>Do you assess the security and privacy of third-party AI providers?</td><td>Yes</td><td>Checklist covers data use, retention, location, security attestations and privacy terms; renewal tracked (APR-007).</td><td>EV-04, EV-05</td></tr>
+<tr><td>11</td><td>Do you use AI to record or transcribe meetings with us?</td><td>Only with consent</td><td>Teams Premium recap only, after your consent at the start of the call. Third-party note-taker bots are banned.</td><td>EV-08, EV-09</td></tr>
+<tr><td>12</td><td>Who is accountable for AI governance?</td><td>Named</td><td>Priya Raman, Director of Operations &amp; IT; oversight by the Managing Partner.</td><td>EV-03</td></tr>
+<tr><td>13</td><td>Are AI-related incidents covered by your incident response process?</td><td>Yes</td><td>Policy section 7 routes AI misuse and AI errors into the incident response plan; same-day reporting.</td><td>EV-03, EV-14</td></tr>
+<tr><td>14</td><td>Have you had any AI-related incident involving client data in the last 12 months?</td><td>Disclosed</td><td>Before 14 Oct 2026, some staff used personal AI accounts and a note-taker bot. Found by our own review; access removed, vendor deletion confirmed. No use of your data was identified.<sup>*</sup></td><td>EV-09, EV-10</td></tr>
+</table>
+<p class="small"><sup>*</sup> In a live engagement this answer is written only from facts the client confirms, and the client decides with its advisers how to disclose.</p>
+</div>
+
+<!-- 7 EVIDENCE -->
+<div class="page">
+<h2>7. Evidence index and framework mapping <span class="small">HV-AIG-EVD-001</span></h2>
+<table>
+<tr><th style="width:7%">ID</th><th style="width:38%">Evidence</th><th style="width:15%">Date</th><th>Location</th></tr>
+<tr><td>EV-01</td><td>AI inventory (this pack, section 2)</td><td>27 Oct 2026</td><td>SharePoint › Governance › AI</td></tr>
+<tr><td>EV-02</td><td>Defender for Cloud Apps discovery report (30 days)</td><td>6 Oct 2026</td><td>Same folder, /discovery</td></tr>
+<tr><td>EV-03</td><td>Signed AI acceptable use policy</td><td>20 Oct 2026</td><td>Policies library</td></tr>
+<tr><td>EV-04</td><td>Approvals log and checklist</td><td>17 Oct 2026</td><td>SharePoint › Governance › AI</td></tr>
+<tr><td>EV-05</td><td>Vendor terms and DPAs (OpenAI, Anthropic, Microsoft, tax software)</td><td>13 – 17 Oct 2026</td><td>/vendors</td></tr>
+<tr><td>EV-06</td><td>Defender for Cloud Apps policies (screenshots)</td><td>14 Oct 2026</td><td>/controls</td></tr>
+<tr><td>EV-07</td><td>Intune extension allow-list configuration</td><td>14 Oct 2026</td><td>/controls</td></tr>
+<tr><td>EV-08</td><td>Client-call consent script and Teams policy</td><td>13 Oct 2026</td><td>/controls</td></tr>
+<tr><td>EV-09</td><td>Note-taker consent revocation and vendor deletion confirmation</td><td>14 – 21 Oct 2026</td><td>/incidents</td></tr>
+<tr><td>EV-10</td><td>Incident record INC-2026-031 (personal AI use)</td><td>14 Oct 2026</td><td>/incidents</td></tr>
+<tr><td>EV-11</td><td>Training slides and Teams attendance export</td><td>22 – 23 Oct 2026</td><td>/training</td></tr>
+<tr><td>EV-12</td><td>Quiz results export</td><td>24 Oct 2026</td><td>/training</td></tr>
+<tr><td>EV-13</td><td>Policy acknowledgements export</td><td>24 Oct 2026</td><td>/training</td></tr>
+<tr><td>EV-14</td><td>Incident response plan v3.2 (AI section added)</td><td>21 Oct 2026</td><td>Policies library</td></tr>
+</table>
+<h3>Framework mapping</h3>
+<table>
+<tr><th style="width:24%">Deliverable</th><th>ISO/IEC 42001:2023 Annex A</th><th>NIST AI RMF 1.0</th><th>Other</th></tr>
+<tr><td>AI inventory</td><td>A.4.2 resource documentation; A.9.4 intended use</td><td>GOVERN 1.6</td><td>EU AI Act Art. 26 (deployer duties, where applicable)</td></tr>
+<tr><td>AI use policy</td><td>A.2.2 AI policy; A.3.2 roles and responsibilities; A.9.2 responsible use</td><td>GOVERN 1.2, 2.1</td><td>FTC Safeguards Rule 16 CFR 314.4(c)</td></tr>
+<tr><td>Approvals and vendor checks</td><td>A.10.3 suppliers; A.7.2 data for AI</td><td>GOVERN 6.1; MANAGE 3.1</td><td>IRC §7216; UK GDPR Art. 28</td></tr>
+<tr><td>Training record</td><td>A.4.6 human resources (competence)</td><td>GOVERN 2.2</td><td>EU AI Act Art. 4 (AI literacy)</td></tr>
+<tr><td>Transparency (calls, chatbot)</td><td>A.8.2 information for users</td><td>GOVERN 4.2; MAP 1.1</td><td>EU AI Act Art. 50</td></tr>
+<tr><td>Incident handling</td><td>A.8.4 communication of incidents</td><td>MANAGE 4.3</td><td>FTC Safeguards Rule 314.4(h)</td></tr>
+</table>
+<p class="small">Mapping shows where each deliverable supports a control; it is not a certification or legal opinion. EU AI Act references apply only where the firm's AI use falls within the Act's scope (e.g. EU clients or users).</p>
+<div class="sig"><div>Client approval — Dana Whitlock, Managing Partner<br>27 Oct 2026</div><div>Prepared by — [MSP name] AI Governance Services<br>27 Oct 2026</div></div>
+</div>
+</body></html>
