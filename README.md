@@ -41,7 +41,7 @@ grc-infosec-portfolio/
 │   ├── 01_Methodology/             ← risk methodology, working method
 │   ├── 02_Registers/               ← risk register, asset and AI inventories, SoAs
 │   ├── 03_Policies/                ← information security and AI policies
-│   ├── 04_Assessments/             ← EU AI Act classification, cloud gap assessment plan
+│   ├── 04_Assessments/             ← AI impact assessments, EU AI Act classification, gap assessment plan
 │   ├── 05_Evidence/                ← evidence register, findings, build log, lab evidence
 │   ├── 06_Decisions/               ← decision records MIC-DEC-001 to 012
 │   └── 07_Infrastructure/          ← Terraform
@@ -76,7 +76,8 @@ grc-infosec-portfolio/
 | Asset inventory (MIC-AST-001) | Meridian | Done |
 | Statement of Applicability: ISO/IEC 27001 (MIC-SOA-001, 93 controls) | Meridian | Done |
 | Statement of Applicability: ISO/IEC 42001 (MIC-SOA-002, 38 controls) | Meridian | Done |
-| AI system impact assessment | Meridian | Next |
+| AI impact assessments (MIC-AIA-001) | Meridian | Done |
+| Access control standard and incident response plan | Meridian | Next |
 | Cloud gap assessment (MIC-GAP-001) | Meridian | Plan written; to be re-scoped before fieldwork |
 | Evidence pack (HV-AIG-PACK-001 v1.1) | Harrow & Vale | Done |
 

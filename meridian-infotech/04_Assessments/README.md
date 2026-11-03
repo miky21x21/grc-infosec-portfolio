@@ -2,6 +2,7 @@
 
 | ID | Artifact | Status |
 | :--- | :--- | :--- |
+| MIC-AIA-001 | [AI system impact assessments](./MIC-AIA-001_AI_Impact_Assessments.md) | Version 1.0, 3 November 2026: process and both v1 systems |
 | MIC-CLS-001 | [EU AI Act classification of the v1 AI systems](./MIC-CLS-001_EU_AI_Act_Classification.md) | Version 1.0, 3 November 2026 |
 | MIC-GAP-001 | [Cloud control gap assessment — assessment plan](./MIC-GAP-001_Assessment_Plan.md) | Scoped — fieldwork not started |
 

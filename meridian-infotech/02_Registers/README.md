@@ -44,7 +44,7 @@ Every Annex A control is listed, applicable or not. **Implementation status** is
 
 Most controls are Designed because the company is simulated. Only what the lab account proves, or a published project document such as the AI policy, is marked Implemented.
 
-**The main gap in MIC-SOA-002 is impact assessment (A.5.2 to A.5.5): all four controls are Planned.** It is the next AI governance artifact.
+Impact assessment (A.5.2 to A.5.5) was the main gap in MIC-SOA-002 until MIC-AIA-001 closed it on 3 November 2026.
 
 ## Open gaps in this register
 
