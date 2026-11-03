@@ -8,6 +8,8 @@
 **Status:** Scoped — fieldwork not started
 **Aligned to:** CIS AWS Foundations Benchmark; ISO/IEC 27001:2022 Annex A; NIST CSF 2.0
 
+> **Note, 3 November 2026.** This plan was written for the earlier BFS scope and refers to the risk IDs of MIC-RSK-001 version 1.0. The register was rebuilt for Meridian Sextant as version 2.0, so the IDs below are historical. Before fieldwork, the plan will be re-scoped to Sextant: in version 2.0 the cloud controls it tests treat MIC-R-005 (residency), MIC-R-009 (privileged access) and MIC-R-010 (evidence integrity).
+
 ---
 
 ## 1. Purpose

@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | ID | MIC-SCP-001 |
-| Version | 2.0 |
-| Date | 23 September 2026 |
+| Version | 2.1 |
+| Date | 3 November 2026 |
 | Author | Mitchell Swapnil Chatterjee |
 | Supersedes | Version 1.0, the Pune BFS delivery unit scope held in the project README |
 | Standards | ISO/IEC 27001:2022 clause 4.3; ISO/IEC 42001:2023 clause 4.3 |
@@ -90,7 +90,7 @@ These rules implement MIC-DEC-010.
 | NIST CSF 2.0 | Common language, especially with US clients |
 | DORA | Contractual, through EU clients' Article 30 clauses (MIC-DEC-001) |
 | GDPR | Sextant is a processor for EU clients; transfers for human access covered by the Standard Contractual Clauses |
-| EU AI Act | Applies to AI provided to EU clients; the v1 products are believed not to be high-risk uses (classification memo pending) |
+| EU AI Act | Applies to AI provided to EU clients; the v1 products are not high-risk; Article 50 transparency and Article 4 AI literacy apply (MIC-CLS-001) |
 | DPDP Act 2023 and Rules 2025 | Data Processor for clients' data; Data Fiduciary for Meridian's own staff data |
 | CERT-In Directions 2022 | Six-hour incident reporting; 180-day log retention (see section 6) |
 | RBI directions and FREE-AI | Through Anvaya's contract (MIC-DEC-004) |
@@ -108,7 +108,7 @@ These rules implement MIC-DEC-010.
 
 ## 9. Real and simulated
 
-**Real:** the AWS account, every control built in it, and all recorded evidence (MIC-EVD-001). **Simulated:** the company, its clients, their documents and its headcount. The lab is one AWS account (MIC-DEC-007) with keyless access (MIC-DEC-008). The multi-account design, the US region and active-active storage are target design only, and MIC-GAP-001 will record them as not implemented rather than claim them.
+**Real:** the AWS account, every control built in it, and all recorded evidence (MIC-EVD-001). **Simulated:** the company, its clients, their documents and its headcount. The lab is one AWS account (MIC-DEC-007) with keyless access (MIC-DEC-008). The multi-account design, the US region, active-active storage and live model invocation (MIC-DEC-012) are target design only, and MIC-GAP-001 will record them as not implemented rather than claim them.
 
 ## 10. Review
 
@@ -120,6 +120,7 @@ The scope is reviewed at least once a year, and whenever a client, region, produ
 |---|---|---|
 | 1.0 | September 2026 | Scope: the Pune BFS delivery unit (held in the README) |
 | 2.0 | 23 September 2026 | Scope moves to Meridian Sextant (MIC-DEC-002); five clients; jurisdiction-level residency (MIC-DEC-010) |
+| 2.1 | 3 November 2026 | EU AI Act classification completed (MIC-CLS-001); live model invocation recorded as lab limit (MIC-DEC-012) |
 
 ---
 
