@@ -126,7 +126,7 @@ The sign-in used an OAuth 2.0 authorization-code flow with PKCE (`code_challenge
 | F-03 | A generic IAM user from earlier tutorials still existed | Deleted (EV-002) |
 | F-04 | A tutorial EC2 key pair still existed in Mumbai | Closed: key pair deleted in AWS by `mitchell-admin` (EV-006, EV-012); local `.pem` file deleted on 24 Sep |
 | F-05 | The opt-in region Asia Pacific (Hyderabad) is enabled on the account | Kept as a future in-country failover region (MIC-DEC-010) |
-| F-06 | Every Amazon Bedrock model invocation fails with "ValidationException: Operation not allowed", in Mumbai and N. Virginia, despite full administrator permissions. Community reports attribute this to an account-level eligibility restriction on new accounts without billing history. **A dependency on a supplier's eligibility decision.** | Open: re-tested on 1 October after the first bill closed, still blocked. AWS support case 179083783600232 opened the same day (Account Activation, Bedrock Allowlisting). Fallback decision by 15 October |
+| F-06 | Every Amazon Bedrock model invocation fails with "ValidationException: Operation not allowed", in Mumbai and N. Virginia, despite full administrator permissions. Community reports attribute this to an account-level eligibility restriction on new accounts without billing history. **A dependency on a supplier's eligibility decision.** | Closed on 3 November as an accepted supplier risk: re-tested on 1 October after the first bill closed, still blocked, and the support case brought no resolution. The lab proceeds without live model invocation (MIC-DEC-012); recorded as risk MIC-R-006 |
 | F-07 | The console was briefly used as root during the Bedrock test, a task that does not require root | Switched to `mitchell-admin`. CloudTrail confirms four model calls made as root (EV-012) |
 | F-08 | **The root-activity record, written from memory, was incomplete.** Reconciliation against CloudTrail found three root uses it omitted or understated: the 22 September billing check, the deletion of `DemoS3Access`, and the 23 September session, which began with a legitimate root-only screenshot. All root changes on 22 September matched intended actions; no unexplained activity was found. The log also shows the control changing behaviour: routine work was done as root on 18 September, and as `mitchell-admin` from 22 September. | Record corrected below. Practice: reconcile the record against CloudTrail after every root session |
 | F-09 | **The automated report (EV-013) found a root password recovery on 18 September** (`PasswordRecoveryRequested`, then `PasswordRecoveryCompleted`), which neither the record nor the manual audit had captured. A root password recovery is a high-attention event, because it is a common route to account takeover. | Confirmed by the owner on 1 October as legitimate (a forgotten root password). Added to the root-activity record |
@@ -203,6 +203,11 @@ No changes to AWS; design and research only.
 - Checked the script's output against the manual audit of 24 September: every event matched. Its complete 14-day view also surfaced a root password recovery on 18 September (F-09), confirmed as legitimate.
 - Protected evidence files from line-ending conversion, so their recorded fingerprints stay valid.
 
+**3 November 2026 — Bedrock fallback and the AI governance set**
+
+- Closed F-06: no resolution from the AWS support case, so the lab proceeds without live model invocation (MIC-DEC-012). Model-dependent controls will be tested with fixed, labelled sample responses.
+- Rebuilt the risk register for the Sextant scope (MIC-RSK-001 v2.0) and added the AI system inventory (MIC-INV-001), AI use and governance policy (MIC-POL-001) and EU AI Act classification memo (MIC-CLS-001).
+
 ## Open actions
 
 - [x] Add a backup authenticator-app MFA device to root (22 Sep)
@@ -214,7 +219,7 @@ No changes to AWS; design and research only.
 - [ ] Set the CLI default region permanently: `aws configure set region ap-south-1`
 - [x] Capture and add the screenshots for EV-001, EV-003, EV-004, EV-005, EV-006 and EV-009 (23 Sep)
 - [x] Pin the console's default region to Mumbai (24 Sep)
-- [ ] Bedrock access (F-06): follow up support case 179083783600232; decide on a fallback by 15 October
+- [x] Bedrock access (F-06): decided on 3 November to proceed without live model invocation (MIC-DEC-012)
 - [ ] Evidence script v2: skip read-only events using CloudTrail's own read-only flag rather than name prefixes
 - [ ] Strip all rules from the default security groups, via Terraform (planned)
 - [ ] Run `aws logout` at the end of each working day
