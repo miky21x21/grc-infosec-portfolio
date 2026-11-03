@@ -6,7 +6,7 @@
 | MIC-INV-001 | [AI system inventory](./MIC-INV-001_AI_System_Inventory.md) | Version 1.0, 3 November 2026 |
 | MIC-AST-001 | [Asset inventory](./MIC-AST-001_Asset_Inventory.md) | Version 1.0, 3 November 2026 |
 | MIC-SOA-001 | [Statement of Applicability: ISO/IEC 27001:2022](./MIC-SOA-001_SoA_ISO27001.csv) | Version 1.0, 3 November 2026: all 93 Annex A controls |
-| MIC-SOA-002 | Statement of Applicability: ISO/IEC 42001:2023 | Next |
+| MIC-SOA-002 | [Statement of Applicability: ISO/IEC 42001:2023](./MIC-SOA-002_SoA_ISO42001.csv) | Version 1.0, 3 November 2026: all 38 Annex A controls |
 
 Registers are published as CSV or Markdown so they render as tables in the browser.
 
@@ -42,7 +42,9 @@ Every Annex A control is listed, applicable or not. **Implementation status** is
 | Inherited | Provided by Meridian group functions or by AWS under shared responsibility. For the simulated company these are stated, not evidenced |
 | Excluded | Not applicable, with the reason given |
 
-Most controls are Designed because the company is simulated. Only what the lab account proves is marked Implemented.
+Most controls are Designed because the company is simulated. Only what the lab account proves, or a published project document such as the AI policy, is marked Implemented.
+
+**The main gap in MIC-SOA-002 is impact assessment (A.5.2 to A.5.5): all four controls are Planned.** It is the next AI governance artifact.
 
 ## Open gaps in this register
 
