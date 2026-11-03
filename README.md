@@ -40,7 +40,7 @@ grc-infosec-portfolio/
 │   ├── 00_Scope/                   ← scope, clients, residency, lab limits
 │   ├── 01_Methodology/             ← risk methodology, working method
 │   ├── 02_Registers/               ← risk register, asset and AI inventories, SoAs
-│   ├── 03_Policies/                ← AI use and governance policy
+│   ├── 03_Policies/                ← information security and AI policies
 │   ├── 04_Assessments/             ← EU AI Act classification, cloud gap assessment plan
 │   ├── 05_Evidence/                ← evidence register, findings, build log, lab evidence
 │   ├── 06_Decisions/               ← decision records MIC-DEC-001 to 012
@@ -69,6 +69,7 @@ grc-infosec-portfolio/
 | Decision records MIC-DEC-001 to 012 | Meridian | Done |
 | Risk register (MIC-RSK-001 v2.0, 11 risks) | Meridian | Done |
 | AI system inventory (MIC-INV-001) | Meridian | Done |
+| Information security policy (MIC-POL-002) | Meridian | Done |
 | AI use and governance policy (MIC-POL-001) | Meridian | Done |
 | EU AI Act classification (MIC-CLS-001) | Meridian | Done |
 | AWS lab controls and evidence (MIC-EVD-001) | Meridian | Ongoing |

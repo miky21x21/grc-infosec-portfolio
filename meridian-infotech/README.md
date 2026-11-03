@@ -27,7 +27,7 @@ Evidence is designed in, not gathered at audit time: every control emits logs, w
 |---|---|
 | [`00_Scope`](00_Scope) | **MIC-SCP-001**: what is in scope, the clients, the residency rules, the exclusions and the lab's limits |
 | [`02_Registers`](02_Registers) | **MIC-RSK-001** risk register (11 risks, nine frameworks), **MIC-AST-001** asset inventory, **MIC-INV-001** AI system inventory, and the Statements of Applicability for ISO/IEC 27001 (**MIC-SOA-001**) and ISO/IEC 42001 (**MIC-SOA-002**) |
-| [`03_Policies`](03_Policies) | **MIC-POL-001**: AI use and governance policy |
+| [`03_Policies`](03_Policies) | **MIC-POL-002**: information security policy; **MIC-POL-001**: AI use and governance policy |
 | [`04_Assessments`](04_Assessments) | **MIC-CLS-001**: EU AI Act classification; **MIC-GAP-001**: cloud gap assessment plan |
 | [`06_Decisions`](06_Decisions) | **MIC-DEC-001 to 012**: each decision with its context, alternatives and consequences |
 | [`05_Evidence`](05_Evidence) | **MIC-EVD-001**: the evidence register, findings, root-activity record and build log |
@@ -40,7 +40,7 @@ ISO/IEC 27001:2022 · ISO/IEC 42001:2023 · SOC 2 · NIST CSF 2.0 · DORA · GDP
 
 ## Status (3 November 2026)
 
-- **Done:** account security, keyless access and cost controls, recorded as evidence; scope and twelve decision records; the first Terraform build, attacked and proven (EV-011); a CloudTrail audit that corrected the project's own root-activity record (F-08); the AI governance set: risk register v2.0, asset and AI system inventories, AI use and governance policy, EU AI Act classification, and Statements of Applicability covering all 93 ISO/IEC 27001 and 38 ISO/IEC 42001 Annex A controls.
+- **Done:** account security, keyless access and cost controls, recorded as evidence; scope and twelve decision records; the first Terraform build, attacked and proven (EV-011); a CloudTrail audit that corrected the project's own root-activity record (F-08); the AI governance set: risk register v2.0, asset and AI system inventories, information security policy, AI use and governance policy, EU AI Act classification, and Statements of Applicability covering all 93 ISO/IEC 27001 and 38 ISO/IEC 42001 Annex A controls.
 - **Decided:** Amazon Bedrock stayed blocked at account level (F-06), so the lab proceeds without live model invocation (MIC-DEC-012). The model layer is designed; everything around it is built and evidenced.
 - **Next:** AI system impact assessments (the four ISO/IEC 42001 A.5 controls still Planned), then re-scoping the cloud gap assessment to Sextant before fieldwork.
 - **Limits of the lab:** one AWS account rather than an organization; no US region; no active-active storage; no live model calls. These are target design only, and are recorded as such.
