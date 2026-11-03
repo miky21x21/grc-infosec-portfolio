@@ -4,7 +4,7 @@
 | :--- | :--- | :--- |
 | MIC-RSK-001 | [Risk register](./MIC-RSK-001_Risk_Register.csv) | Version 2.0, 3 November 2026: 11 risks for the Meridian Sextant scope |
 | MIC-INV-001 | [AI system inventory](./MIC-INV-001_AI_System_Inventory.md) | Version 1.0, 3 November 2026 |
-| MIC-AST-001 | Asset inventory | Not started |
+| MIC-AST-001 | [Asset inventory](./MIC-AST-001_Asset_Inventory.md) | Version 1.0, 3 November 2026 |
 | MIC-SOA-001 | Statement of Applicability | Planned |
 
 Registers are published as CSV or Markdown so they render as tables in the browser.
@@ -30,7 +30,6 @@ Where an EU AI Act article is cited for a system that is not high-risk, the colu
 
 ## Open gaps in this register
 
-- **Asset IDs are forward references.** `AST-AIS-001` (compliance intelligence), `AST-AIS-002` (operations agents), `AST-CLD-001` (Sextant AWS environment), `AST-DAT-001` (client knowledge bases and graphs), `AST-LOG-001` (logs and evidence) and `AST-EPT-001` (endpoints in the client bays) will be defined in MIC-AST-001.
 - **Scoring method.** MIC-MTH-001 still names roles from the earlier BFS scope (for example the BFS Delivery Head). The scales are unchanged; the role names will be updated in its next revision.
 - **Not yet covered:** physical security of the client bays, backup and recovery, and model drift once live models are in use.
 
